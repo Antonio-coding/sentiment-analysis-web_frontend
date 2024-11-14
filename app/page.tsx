@@ -15,7 +15,7 @@ export default function Home() {
 
   const handleStartAnalysis = () => {
     if (url) {
-      router.push(`/analyze?siteUrl=${encodeURIComponent(url)}`);
+      router.push(`pages/analyze?siteUrl=${encodeURIComponent(url)}`);
     }
   };
 
