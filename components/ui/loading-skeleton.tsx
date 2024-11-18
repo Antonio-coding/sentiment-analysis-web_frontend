@@ -2,8 +2,13 @@ export default function LoadingSkeleton() {
     return (
 
         <>
-            <div>Loading</div>
-            <div>Animação de carregamento ... </div>
+            <div className=" flex flex-col items-center justify-center">
+
+                {/* Animação da Barra de Carregamento */}
+                <div className="relative w-64 h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div className="absolute h-full bg-indigo-500 rounded-full animate-loading-bar"></div>
+                </div>
+            </div>
         </>
     )
 }
