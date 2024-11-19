@@ -9,10 +9,10 @@ export default function ContatoPage() {
                     Entre em contato com a nossa equipe utilizando as informações abaixo:
                 </p>
                 <ul className="list-disc list-inside space-y-3">
-                    <li>Antônio - antonio@example.com</li>
-                    <li>Thiago - thiago@example.com</li>
-                    <li>Neto - neto@example.com</li>
-                    <li>Outros membros - equipe@example.com</li>
+                    <li>Antônio Thiago Neto - https://github.com/Antonio-coding</li>
+                    <li>Danilo Fernandes Rodrigues da Silva - https://github.com/danilozxz</li>
+                    <li>Carlos Eduardo Bezerra de Lima - https://github.com/Eduard0177</li>
+
                 </ul>
             </main>
         </div>
