@@ -1,5 +1,6 @@
 "use client";
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 
 export default function ResultadosPage() {
     // Simulação de dados (substituir por dados da API)
@@ -37,7 +38,7 @@ export default function ResultadosPage() {
             <div className="flex justify-between items-center mt-10 w-full max-w-4xl">
                 {/* Gráfico Simulado */}
                 <div className="w-48 h-48 bg-gray-200 rounded-full flex items-center justify-center shadow-md">
-                    <img
+                    <Image
                         src="/grafico.png" // Troque por um gráfico dinâmico se necessário
                         alt="Gráfico de Sentimentos"
                         className="object-contain w-40 h-40"

@@ -1,26 +1,23 @@
-// app/page.tsx
 "use client";
 
 import axios from "axios";
 import { useState } from "react";
 
-
-
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
 export default function Home() {
-
   const [review, setReview] = useState('');
-  const [probabilities, setProbabilities] = useState(null);
+  const [probabilities, setProbabilities] = useState<Record<string, number> | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = async (event: { preventDefault: () => void; }) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:8000/predict', {
+      const response = await axios.post(`${API_KEY}/predict`, {
         review: review,
       });
       setProbabilities(response.data.probabilities);
@@ -38,10 +35,10 @@ export default function Home() {
       <form onSubmit={handleSubmit}>
         <textarea
           value={review}
-          onChange={(e) => setReview(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setReview(e.target.value)}
           placeholder="Digite seu comentário aqui"
-          rows="5"
-          cols="50"
+          rows={5}
+          cols={50}
           className="p-4 rounded-xl mx-auto outline-none bg-zinc-900 shadow-shape mb-4"
         />
         <br />
@@ -76,5 +73,4 @@ export default function Home() {
       )}
     </div>
   );
-
 }
