@@ -3,7 +3,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-const API_KEY = process.env.NEXT_PUBLIC_API;
+const API_KEY = process.env.NEXT_PUBLIC_TUNNEL_TOKEN;
 
 export default function Home() {
   const [review, setReview] = useState('');
