@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### Sentiment Analysis Web: README
 
-## Getting Started
+# 📊 **Sentiment Analysis Web**
 
-First, run the development server:
+O projeto **Sentiment Analysis Web** é uma aplicação para análise de sentimentos baseada em inteligência artificial. Ele avalia comentários inseridos pelo usuário e prevê a quantidade de estrelas que o comentário representa em uma escala de 1 a 5. Este projeto foi desenvolvido como parte da disciplina de **Inteligência Artificial** no curso de **Sistemas para Internet** da **Universidade Católica de Pernambuco (UNICAP)**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 **Funcionalidades**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Análise preditiva de sentimentos com base em comentários em português ou inglês.
+- Classificação de comentários em uma escala de 1 a 5 estrelas.
+- Frontend responsivo desenvolvido com **Next.js** e **Tailwind CSS**.
+- Backend robusto em **Python**, utilizando bibliotecas modernas como **FastAPI** e **Transformers**.
+- Integração entre frontend e backend via API.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📦 **Estrutura do Projeto**
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend**: Desenvolvido com Next.js. Hospedado na **Vercel**.
+- **Backend**: Implementado em Python utilizando FastAPI, rodando em ambiente local com suporte ao túnel gerado pelo **ngrok**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Repositórios:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Frontend no GitHub](https://github.com/Antonio-coding/sentiment-analysis-web_frontend)
+- [Backend no GitHub](https://github.com/Antonio-coding/sentiment-analysis-web_backend)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠 **Como Executar o Projeto**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### **1. Modo Local**
+
+#### **Frontend**
+
+1. Clone o repositório do frontend:
+   ```bash
+   git clone https://github.com/Antonio-coding/sentiment-analysis-web_frontend
+   cd sentiment-analysis-web_frontend
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+4. Acesse a aplicação no navegador em: `http://localhost:3000`.
+
+#### **Backend**
+
+1. Clone o repositório do backend:
+   ```bash
+   git clone https://github.com/Antonio-coding/sentiment-analysis-web_backend
+   cd sentiment-analysis-web_backend
+   ```
+2. Instale o **Python** (versão 3.8 ou superior) no seu computador.
+3. Instale as dependências do backend:
+   ```bash
+   pip install fastapi uvicorn transformers pyngrok torch nest-asyncio
+   ```
+4. Configure o **ngrok** para gerar o túnel:
+   - Crie uma conta no [ngrok](https://ngrok.com/).
+   - Configure seu authtoken:
+     ```bash
+     ngrok authtoken <seu_authtoken>
+     ```
+   - Inicie o túnel na porta padrão:
+     ```bash
+     ngrok http 8000
+     ```
+5. Atualize o caminho do túnel no frontend:
+   - Substitua a variável de API no arquivo de ambiente do frontend (`.env.local`) com o URL gerado pelo ngrok, por exemplo:
+     ```env
+     NEXT_PUBLIC_API_URL=https://<caminho-do-tunel>.ngrok.io
+     ```
+6. Inicie o servidor do backend:
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+---
+
+### **2. Modo Online com Deploy na Vercel**
+
+- Para rodar o frontend online, hospede-o no **Vercel**.
+- Certifique-se de que o backend está rodando em uma máquina local e o caminho gerado pelo **ngrok** foi configurado na variável de ambiente da Vercel.
+- Sempre atualize o caminho do túnel toda vez que reiniciar o ngrok.
+
+---
+
+## 👥 **Equipe**
+
+| Nome                                | GitHub                                              | Avatar                                                           |
+| ----------------------------------- | --------------------------------------------------- | ---------------------------------------------------------------- |
+| Antônio Thiago Neto                 | [Antonio-coding](https://github.com/Antonio-coding) | ![Avatar](https://avatars.githubusercontent.com/u/112974950?v=4) |
+| Danilo Fernandes Rodrigues da Silva | [danilozxz](https://github.com/danilozxz)           | ![Avatar](https://avatars.githubusercontent.com/u/149892834?v=4) |
+| Carlos Eduardo Bezerra de Lima      | [Eduard0177](https://github.com/Eduard0177)         | ![Avatar](https://avatars.githubusercontent.com/u/131684798?v=4) |
+| Danilo Santana                      | [DaniloSantos31](https://github.com/DaniloSantos31) | ![Avatar](https://avatars.githubusercontent.com/u/130468402?v=4) |
+| Gabriel Pereira Araújo              | [GabrielP02](https://github.com/GabrielP02)         | ![Avatar](https://avatars.githubusercontent.com/u/115106954?v=4) |
+| Alysson Rafael Freire Silva Santos  | [Alysson04](https://github.com/Alysson04)           | ![Avatar](https://avatars.githubusercontent.com/u/131741122?v=4) |
+
+---
+
+## 📝 **Licença**
+
+Este projeto foi desenvolvido para fins acadêmicos e está sob licença MIT. Sinta-se à vontade para explorar, modificar e usar o código, respeitando os direitos dos autores.

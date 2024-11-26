@@ -6,24 +6,31 @@ export default function ComoFuncionaPage() {
             </header>
             <main className="max-w-4xl mx-auto">
                 <p className="text-lg mb-4">
-                    O sistema funciona da seguinte maneira:
+                    O sistema é um analisador de feedback que funciona da seguinte maneira:
                 </p>
                 <ol className="list-decimal list-inside space-y-3">
                     <li>
-                        O usuário insere a URL do site que deseja analisar.
+                        O usuário copia o comentário de uma publicação ou site (Ctrl+C).
                     </li>
                     <li>
-                        Em seguida, ele seleciona os comentários do site utilizando um seletor CSS.
+                        Em seguida, cola o comentário na caixa de entrada do nosso site (Ctrl+V).
                     </li>
                     <li>
-                        O sistema envia os comentários para uma API que processa os dados e realiza a análise de sentimento.
+                        O sistema processa o texto utilizando inteligência artificial que roda no backend para analisar o sentimento e a intenção do comentário.
                     </li>
                     <li>
-                        Os resultados são apresentados, indicando a positividade, negatividade ou neutralidade de cada comentário.
+                        Após a análise, o sistema exibe um resultado preditivo, indicando:
+                        <ul className="list-disc ml-6 mt-2 space-y-2">
+                            <li>A porcentagem de cada avaliação em estrelas (1 a 5).</li>
+                            <li>Insights úteis sobre a tonalidade do feedback, seja positiva, negativa ou neutra.</li>
+                        </ul>
                     </li>
                 </ol>
                 <p className="text-lg mt-4">
-                    Com essa análise, é possível obter insights valiosos sobre as opiniões dos usuários em diferentes plataformas.
+                    Nosso sistema suporta comentários em Português e Inglês, ajudando a interpretar feedbacks de diferentes públicos.
+                </p>
+                <p className="text-lg mt-2">
+                    Use nossa ferramenta para obter insights claros e detalhados sobre as opiniões de usuários, ajudando na tomada de decisões estratégicas.
                 </p>
             </main>
         </div>

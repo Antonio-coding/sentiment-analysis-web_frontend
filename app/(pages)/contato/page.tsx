@@ -27,9 +27,9 @@ const membros = [
         avatar: "https://avatars.githubusercontent.com/u/115106954?v=4",
     },
     {
-        nome: "Alynsson",
-        github: "https://github.com/Eduard0177",
-        avatar: "https://avatars.githubusercontent.com/u/567890123?v=4", // substitua com a URL do avatar
+        nome: "Alysson Rafael Freire Silva santos",
+        github: "https://github.com/Alysson04",
+        avatar: "https://avatars.githubusercontent.com/u/131741122?v=4", // substitua com a URL do avatar
     },
 ];
 
